@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: cursive;
+    width: 90%;
+    margin: 0% 5%;
+}
+
+header {
+    padding: 1% 0%;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+header p {
+    border: 1.5px solid rgb(100, 100, 100);
+    border-radius: 15px;
+    width: 23%;
+    padding: 0.3%;
+    margin: 0% 39.7%;
+    text-align: center;
+}
+
+header p span {
+    color: red;
+}
+
+#flex {
+    display: flex;
+}
+
+#flex #greeting {
+    width: 80%;
+    padding: 0.5%;
+    font-size: large;
+}
+
+#greeting span {
+    color: red;
+}
+
+main form {
+    border: 3px solid rgb(200, 200, 200);
+    box-shadow: 3px 3px 7px rgb(200, 200, 200), -3px -3px 7px rgb(200, 200, 200);
+    width: 80%;
+    padding: 1%;
+    margin: 2.5% 9% 1% 9%;
+}
+
+input {
+    padding: 1%;
+    border: 0px;
+    border-bottom: 2px solid rgb(125, 125, 125);
+    background-color: transparent;
+}
+
+#name {
+    width: 97.5%;
+    margin: 0.5% 0% 3% 0%;
+}
+
+#description {
+    width: 97.5%;
+    margin: 0% 0% 3% 0%;
+}
+
+input:focus {
+    outline: none;
+}
+
+main form button {
+    width: 16%;
+    padding: 0.5%;
+    margin: 1% 42% 2% 42%;
+    font-weight: bold;
+    font-size: 90%;
+    border-radius: 10px;
+}
+
+main form button:hover {
+    background-color: black;
+    color: white;
+}
+
+#flex #logout {
+    width: 20%;
+    padding: 0.5%;
+    text-align: center;
+}
+
+#logoutbutton {
+    width: 50%;
+    padding: 2%;
+    font-weight: bold;
+    font-size: 100%;
+    border-radius: 10px;
+}
+
+#logoutbutton:hover {
+    background-color: black;
+}
+
+#logoutbutton a {
+    text-decoration: none;
+    color: black;
+}
+
+#logoutbutton a:hover {
+    color: white;
+}
+
+#display table {
+    width: 82%;
+    padding: 0.3%;
+    margin: 3% 8.5% 2% 9.2%;
+}
+
+#display th {
+    box-shadow: 2px 2px 5px rgb(100, 100, 100),
+        -2px -2px 5px rgb(100, 100, 100);
+}
+
+#display #nam {
+    width: 15%;
+    padding: 0.5% 0%;
+}
+
+#na {
+    text-align: center;
+}
+
+#display #des {
+    width: 25%;
+}
+
+#de {
+    text-align: justify;
+}
+
+#display #tim {
+    width: 10%;
+}
+
+#ti {
+    text-align: center;
+}
+
+#display #del {
+    width: 8%;
+}
+
+#delbut {
+    width: 58%;
+    margin: 20%;
+    padding: 3% 1%;
+    border-radius: 7px;
+}
+
+#dellink {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}

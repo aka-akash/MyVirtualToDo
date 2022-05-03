@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo-Login</title>
+    <link rel="stylesheet" href="../static/ToDoLogin.css">
+</head>
+
+<body>
+    <header>
+        <p>My-<span>Virtual</span>-To-Do's</p>
+    </header>
+
+    <main>
+        <form action="{{url_for('Login_Records')}}" method="post">
+            <input type="text" name="userId" id="userId" placeholder="Enter User-Id" autofocus
+                title="Please Enter Your Registered UserID" required>
+            <br>
+            <input type="password" name="pwd" id="pwd" placeholder="Enter Pass-Word"
+                title="Enter Your Registered PassWord" required>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}
+            <p>{{ message }}</p>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+            <button type="submit" title="Click To Login">Login</button>
+        </form>
+        <p>
+            Please Register Yourself.
+            <a href="{{url_for('ToDoSignUp')}}">SignUp</a>
+            Here.
+        </p>
+    </main>
+
+</body>
+
+</html>

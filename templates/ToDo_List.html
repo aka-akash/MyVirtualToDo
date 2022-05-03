@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo-List</title>
+    <link rel="stylesheet" href="../static/ToDoList.css">
+</head>
+
+<body>
+    <header>
+        <p>My-<span>Virtual</span>-To-Do's</p>
+    </header>
+
+    <section id="flex">
+        <div id="greeting">
+            <p>Welcome <span>{{ Name }}</span>, Here's Your To-Do List.</p>
+        </div>
+        <div id="logout">
+            <button type="button" id="logoutbutton" title="Click To LogOut"><a
+                    href="{{url_for('ToDoLogout')}}">Log-Out</a></button>
+        </div>
+    </section>
+
+    <main>
+        <form action="{{url_for('ListToDo')}}" method="post">
+            <input type="text" name="name" id="name" placeholder="Task Title Name"
+                title="This should contain the title of the task." required>
+            <br>
+            <input type="text" name="description" id="description" placeholder="Description of the Task"
+                title="This should contain the description of the task." required>
+            <br>
+            <button type="submit" id="Click To Register Task">Submit</button>
+        </form>
+    </main>
+
+    <section id="display">
+        <table>
+            <thead>
+                <tr>
+                    <th id="nam">Task Name</th>
+                    <th id="des">Task Descriptiom</th>
+                    <th id="tim">Task Register Time</th>
+                    <th id="del">Delete Task</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for todo in alltodo %}
+                <tr>
+                    <td id="na">{{todo.name}}</td>
+                    <td id="de">{{todo.description}}</td>
+                    <td id="ti">{{todo.dateCreation}}</td>
+                    <td><button type="button" id="delbut"><a href="DeleteToDo/{{todo.name}}" id="dellink"
+                                title="Click To Delete Task">Delete</a></button></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+
+</body>
+
+</html>
